@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCs-Oh-q0e">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="h0T-xc-E5B">
+            <objects>
+                <tableViewController id="JCs-Oh-q0e" customClass="TableViewController" customModule="StretchHeaderViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xMC-9m-tyU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="ENJ-iv-74X" customClass="StretchHeaderView" customModule="StretchHeaderViewExample" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="137"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSP-kh-moy">
+                                    <rect key="frame" x="12" y="12" width="351" height="113"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ZSP-kh-moy" secondAttribute="trailing" constant="12" id="1Ya-w3-QZ5"/>
+                                <constraint firstAttribute="bottom" secondItem="ZSP-kh-moy" secondAttribute="bottom" constant="12" id="Otd-ba-qpV"/>
+                                <constraint firstItem="ZSP-kh-moy" firstAttribute="leading" secondItem="ENJ-iv-74X" secondAttribute="leading" constant="12" id="WeQ-n2-ME2"/>
+                                <constraint firstItem="ZSP-kh-moy" firstAttribute="top" secondItem="ENJ-iv-74X" secondAttribute="top" constant="12" id="fQM-yv-bfY"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="tableView" destination="xMC-9m-tyU" id="vJd-ER-P6j"/>
+                            </connections>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" id="0uG-Dg-xdd">
+                                <rect key="frame" x="0.0" y="165" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0uG-Dg-xdd" id="yb0-WC-EdZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JCs-Oh-q0e" id="xt4-j7-bnH"/>
+                            <outlet property="delegate" destination="JCs-Oh-q0e" id="4XI-oK-nI0"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="headerView" destination="ENJ-iv-74X" id="EfC-SA-thk"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aU7-Xg-gL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="210.94452773613196"/>
+        </scene>
+    </scenes>
+</document>
